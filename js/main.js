@@ -18,7 +18,7 @@ $(document).ready(function () {
     mouseDrag: false,
     items: 1,
     margin: 0,
-    smartSpeed: 1200,
+    smartSpeed: 2400,
     autoHeight: false,
     autoplay: true,
   });
