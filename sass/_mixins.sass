@@ -1,5 +1,38 @@
+/*=== Text Styles ===*/
 @mixin section-title()
   font: normal 700 3.2rem/5rem "JosefinSans"
   color: $color-dark
   text-transform: uppercase
   text-align: center
+
+/*=== Buttons ===*/
+@mixin button-primary()
+  position: relative
+  display: inline-block
+  font: normal 700 1.5rem "Play"
+  padding: 1.5rem 3rem
+  text-transform: uppercase
+  letter-spacing: 2px
+  color: $color-light
+  &:hover
+    &::after, &::before
+      width: 100%
+      height: 100%
+      transition: height 0.8s ease, width 0.8s ease
+  &::after, &::before
+    content: ""
+    position: absolute
+    z-index: 10
+    width: 3rem
+    height: 3rem
+    background: transparent
+  &::before
+    top: 0
+    left: 0
+    border-top: 1px solid $color-accent
+    border-left: 1px solid $color-accent
+  &::after
+    bottom: 0
+    right: 0
+    border-bottom: 1px solid $color-accent
+    border-right: 1px solid $color-accent

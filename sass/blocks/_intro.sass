@@ -1,0 +1,54 @@
+.intro
+  padding: 25rem 0 12rem
+  background-image: url(../img/intro/intro-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  &__item
+    max-width: 55rem
+    padding-bottom: 10rem
+  &__suptitle
+    margin-bottom: 1.8rem
+    font: normal 400 1.5rem "JosefinSans"
+    letter-spacing: 2px
+    color: $color-light
+    text-transform: uppercase
+  &__title
+    margin-bottom: 3.8rem
+    font: normal 700 6rem/7rem "Play"
+    text-transform: uppercase
+    color: $color-light
+  &__button
+    @include button-primary()
+
+  .owl-carousel
+    .owl-dots
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 5rem
+      width: 100%
+      max-width: 100%
+      margin: 0 auto
+      .owl-dot
+        position: relative
+        display: inline-block
+        margin-right: 2rem
+        font: normal 400 1.8rem 'Play'
+        color: $color-grey
+        &.active
+          color: $color-light
+          &:after
+            background: $color-light
+            height: 1.5px
+        &:after 
+          content: ""
+          position: absolute
+          left: 0
+          bottom: -0.5rem
+          width: 100%
+          height: 1px
+          background: rgba($color-light, 0.2)
+        &:last-child 
+          margin-right: 0
+
