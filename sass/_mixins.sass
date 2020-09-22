@@ -1,9 +1,39 @@
 /*=== Text Styles ===*/
-@mixin section-title()
-  font: normal 700 3.2rem/5rem "JosefinSans"
-  color: $color-dark
+@mixin section-title($font-size: 3.6rem, $text-transform: uppercase)
+  position: relative
+  font-family: "Play"
+  font-style: normal
+  font-weight: 700 
+  font-size: $font-size
+  text-transform: $text-transform
+  color: $color-light
+
+@mixin section-title-after()
+  content: ""
+  position: absolute
+  bottom: -2.5rem
+  display: block
+  width: 7rem
+  height: 0.5rem
+  background-color: $color-accent
+
+@mixin section-suptitle($font-size: 1.6rem)
+  font-family: "JosefinSans"
+  font-style: normal
+  font-weight: 400 
+  font-size: $font-size
+  letter-spacing: 2px
   text-transform: uppercase
-  text-align: center
+  color: $color-light
+
+@mixin paragraph-text($font-size: 1.6rem)
+  font-family: "JosefinSans"
+  font-style: normal
+  font-weight: 400 
+  font-size: $font-size
+  line-height: $font-size * 1.625
+  color: $color-grey
+  
 
 /*=== Buttons ===*/
 @mixin button-primary()
@@ -29,10 +59,10 @@
   &::before
     top: 0
     left: 0
-    border-top: 1px solid $color-accent
-    border-left: 1px solid $color-accent
+    border-top: 2px solid $color-accent
+    border-left: 2px solid $color-accent
   &::after
     bottom: 0
     right: 0
-    border-bottom: 1px solid $color-accent
-    border-right: 1px solid $color-accent
+    border-bottom: 2px solid $color-accent
+    border-right: 2px solid $color-accent
