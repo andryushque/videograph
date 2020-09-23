@@ -18,9 +18,10 @@ $(document).ready(function () {
     mouseDrag: false,
     items: 1,
     margin: 0,
-    smartSpeed: 2400,
+    smartSpeed: 1200,
     autoHeight: false,
-    autoplay: true,
+    animateOut: "fadeOut",
+    animateIn: "fadeIn",
   });
 
   // Number of slider for every dot
