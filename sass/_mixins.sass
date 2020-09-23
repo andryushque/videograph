@@ -66,3 +66,25 @@
     right: 0
     border-bottom: 2px solid $color-accent
     border-right: 2px solid $color-accent
+
+/*=== Mixin for multiline dots ===*/
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: $color-light)
+  overflow: hidden
+  position: relative
+  line-height: $lineHeight
+  max-height: $lineHeight * $lineCount
+  text-align: justify
+  padding-right: 1em
+  &:before
+    content: '...'
+    position: absolute
+    right: 0
+    bottom: 0
+  &:after 
+    content: ''
+    position: absolute
+    right: 0
+    width: 1em
+    height: 1em
+    margin-top: 1.2em
+    background: $bgColor

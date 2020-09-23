@@ -34,4 +34,13 @@ $(document).ready(function () {
       $(this).html(index);
     }
   });
+
+  // Slider for blog section
+  $(".blog .owl-carousel").owlCarousel({
+    loop: true,
+    dots: true,
+    dotsEach: true,
+    items: 3,
+    smartSpeed: 1200,
+  });
 });

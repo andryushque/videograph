@@ -1,0 +1,121 @@
+.blog
+  padding: 12rem 0 8rem
+  &__info
+    margin-bottom: 2rem
+  &__suptitle
+    text-align: center
+    margin-bottom: 0.6rem
+    @include section-suptitle()
+  &__title
+    text-align: center
+    margin-bottom: 7.5rem
+    @include section-title()
+    &::after
+      left: 50%
+      transform: translateX(-50%)
+      @include section-title-after()
+
+  &__slider
+    .card
+      position: relative
+      width: 36rem
+      min-height: 36rem
+      padding: 4rem
+      border: 1px solid #333333
+      background: transparent
+      &__content
+        position: relative
+        z-index: 100
+        width: 100%
+        min-height: 28rem
+        height: 100%
+        display: flex
+        flex-direction: column
+      &__title
+        margin-bottom: 1.8rem
+        @include section-title($font-size: 2.4rem, $text-transform: none)
+      &__info
+        margin-bottom: 2rem
+        font: normal 300 1.4rem "JosefinSans"
+        color: #777
+      &__date
+        position: relative
+        display: inline-block
+        margin-right: 2rem
+        &::after
+          content: "/"
+          position: absolute
+          top: 0
+          right: -1.5rem
+          z-index: 10
+      &__text
+        margin-bottom: 2rem
+        font: normal 300 1.4rem "JosefinSans"
+        color: #777
+        @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 4, $bgColor: $color-accent2)
+      &__link
+        display: flex
+        align-items: center
+        margin-top: auto
+        margin-bottom: 0
+        font: normal 400 1.6rem "JosefinSans"
+        color: $color-light
+        &:hover
+          color: $color-accent
+          transition: color 0.5s ease
+      &__icon
+        margin-left: 1rem
+        font-size: 1.4rem
+      &::before
+        content: ""
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        z-index: 99
+        width: 100% 
+        height: 100%
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        filter: grayscale(0.42)
+        opacity: 0
+      &.blog__card
+        &--1
+          &::before
+            background-image: url(../img/blog/blog-1.jpg)
+        &--2
+          &::before
+            background-image: url(../img/blog/blog-2.jpg)
+        &--3
+          &::before
+            background-image: url(../img/blog/blog-1.jpg)
+        &--4
+          &::before
+            background-image: url(../img/blog/blog-2.jpg)
+      &:hover
+        &::before
+          opacity: 1
+          transition: opacity 0.5s ease
+        .card
+          &__text, &__info
+            color: $color-light
+            transition: color 0.5s ease
+
+  .owl-carousel 
+    .owl-dots
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 4rem
+      .owl
+        &-dot
+          display: inline-block
+          width: 0.8rem
+          height: 0.8rem
+          margin-right: 1rem
+          border-radius: 50%  
+          background-color: rgba($color-light, 0.2)
+          &.active
+            background-color: $color-accent
