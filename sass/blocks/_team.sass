@@ -1,0 +1,99 @@
+.team
+  padding: 12rem 0 8rem
+  background-image: url(../img/team/team-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+
+  &-wrapper
+    text-align: right
+  &__info
+    margin-bottom: 2rem
+  &__suptitle
+    text-align: left
+    margin-bottom: 0.6rem
+    @include section-suptitle()
+  &__title
+    text-align: left
+    margin-bottom: 7.5rem
+    @include section-title()
+    &::after
+      left: 0
+      @include section-title-after()
+
+  &__cards
+    display: flex
+    justify-content: space-between
+    .card
+      position: relative
+      width: 25%
+      max-width: 30rem
+      height: 39rem
+      overflow: hidden
+      &:nth-child(2)
+        margin-top: -6rem
+      &:nth-child(3)
+        margin-top: -12rem
+      &:nth-child(4)
+        margin-top: -18rem
+      &:hover
+        .card
+          &__content
+            bottom: 0
+            transition: bottom 0.5s ease
+      &__image
+        width: 100%
+        height: 100%
+        object-fit: cover
+      &__content
+        position: absolute
+        bottom: -25rem
+        left: 0
+        right: 0
+        z-index: 10
+        padding: 5rem 0 3rem
+        text-align: center
+        &::before
+          content: ""
+          position: absolute
+          left: 0
+          bottom: 0
+          z-index: 10
+          height: 100%
+          width: 100%
+          background-image: url(../img/team/team-hover.png)
+          background-repeat: no-repeat
+          background-size: cover
+      &__name
+        position: relative
+        z-index: 11
+        margin-bottom: 1rem
+        @include section-title($font-size: 2.2rem)
+      &__profession
+        position: relative
+        z-index: 11
+        display: inline-block
+        margin-bottom: 1.5rem
+        @include paragraph-text($color: $color-light)
+      &__links
+        position: relative
+        z-index: 11
+        display: flex
+        justify-content: center
+        align-items: center
+      &__link
+        margin-right: 1.8rem
+        &:last-child
+          margin-right: 0
+        &:hover
+          .card
+            &__icon
+              color: $color-accent
+              transition: color 0.5s ease
+      &__icon
+        font-size: 1.5rem
+        color: $color-light
+
+  &__button
+    text-align: right
+    @include button-primary()
