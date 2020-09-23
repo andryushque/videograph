@@ -1,0 +1,17 @@
+.cta
+  padding: 12rem 0
+  background-image: url(../img/cta/callto-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+
+  &__title
+    max-width: 60%
+    margin-bottom: 2.2rem
+    @include section-title($font-size: 4.2rem, $text-transform: capitalize)
+  &__text
+    margin-bottom: 5.5rem
+    text-transform: uppercase
+    @include paragraph-text($font-size: 1.5rem, $color: rgba($color-light, 0.7))
+  &__button
+    @include button-secondary()

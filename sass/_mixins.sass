@@ -67,6 +67,20 @@
     border-bottom: 2px solid $color-accent
     border-right: 2px solid $color-accent
 
+@mixin button-secondary()
+  position: relative
+  display: inline-block
+  font: normal 700 1.5rem "Play"
+  padding: 1.5rem 3rem
+  text-transform: uppercase
+  letter-spacing: 2px
+  color: $color-light
+  background-color: $color-accent
+  border: 2px solid $color-accent
+  &:hover
+    background-color: rgba($color-accent, 0.1)
+    transition: background-color 0.5s ease
+
 /*=== Mixin for multiline dots ===*/
 @mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: $color-light)
   overflow: hidden
