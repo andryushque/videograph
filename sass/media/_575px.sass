@@ -17,3 +17,14 @@
       width: 100%
     .card
       width: 100%
+
+  .work
+    &-wrapper
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(4, 28.8rem)
+    &__item
+      &:nth-child(1)
+        grid-column: span 1
+      &:nth-child(4)
+        grid-column: span 1
+        grid-row: span 1
