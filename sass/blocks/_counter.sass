@@ -1,0 +1,100 @@
+.counter
+  padding: 12rem 0
+  .container
+    overflow: hidden
+  &-wrapper
+    padding: 6rem 0
+    transform: rotate(-45deg)
+  &-row
+    display: flex
+    flex-wrap: wrap
+    &:first-child
+      justify-content: flex-start
+      padding-left: 4.53rem
+      .counter
+        &__item
+          position: relative
+          width: 36rem
+          height: 30rem
+          &:first-child
+            padding: 0 0rem 6rem 12rem
+            &::before
+              content: ""
+              position: absolute
+              top: 0rem
+              left: 12rem
+              width: 60rem
+              height: 60rem
+              display: block
+              border-right: 1px solid #333333
+              border-top: 1px solid #333333
+          &:last-child
+            padding: 6rem 6rem 0
+            &::before
+              content: ""
+              position: absolute
+              top: -12rem
+              left: 0
+              width: 48rem
+              height: 48rem
+              display: block
+              border-left: 1px solid #333333
+              border-bottom: 1px solid #333333
+    &:last-child
+      justify-content: flex-end
+      padding-right: 4.53rem
+      .counter
+        &__item
+          position: relative
+          width: 36rem
+          height: 36rem
+          &:first-child
+            padding: 6rem 0rem 6rem 12rem
+            &::before
+              content: ""
+              position: absolute
+              top: 0rem
+              left: -6rem
+              width: 48rem
+              height: 48rem
+              display: block
+              border-right: 1px solid #333333
+              border-top: 1px solid #333333
+          &:last-child
+            padding: 12rem 6rem 0rem 6rem
+            &::before
+              content: ""
+              position: absolute
+              top: -24rem
+              left: -30rem
+              width: 60rem
+              height: 60rem
+              display: block
+              border-left: 1px solid #333333
+              border-bottom: 1px solid #333333
+
+  &__content-wrapper
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #1a083d
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    transform: rotate(45deg)
+  &__icon
+    display: block
+    height: 6rem
+    margin-bottom: 1.8rem
+  &__number
+    display: block
+    margin-bottom: 0.6rem
+    font: normal 700 6rem "Play"
+    color: $color-light
+  &__text
+    display: block
+    font: normal 400 1.6rem/2.6rem "JosefinSans"
+    color: $color-grey
