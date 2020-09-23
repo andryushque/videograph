@@ -28,3 +28,12 @@
       &:nth-child(4)
         grid-column: span 1
         grid-row: span 1
+
+  .counter
+    padding: 3rem 0
+    &-row
+      &:first-child, &:last-child
+        .counter
+          &__item
+            &:first-child, &:last-child
+              padding: 2rem 1rem

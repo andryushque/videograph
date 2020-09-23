@@ -34,3 +34,15 @@
   .work
     &-wrapper
       grid-template-columns: repeat(3, 1fr)
+
+  .counter
+    padding: 4rem 0
+    &-row
+      &:first-child, &:last-child
+        .counter
+          &__item
+            height: 28.8rem
+            &:first-child, &:last-child
+              width: 100%
+              padding: 3rem 2rem
+              border: none

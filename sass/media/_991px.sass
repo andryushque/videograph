@@ -63,3 +63,35 @@
     &-wrapper
       grid-template-columns: repeat(4, 1fr)
       grid-template-rows: repeat(3, 28.8rem)
+
+  .counter
+    &-wrapper
+      padding: 0
+      transform: rotate(0deg)
+    &-row
+      &:first-child
+        justify-content: center
+        padding-left: 0
+        .counter
+          &__item
+            height: 30rem
+            &:first-child
+              width: 50%
+              border-top: 1px solid #333333
+            &:last-child
+              width: 50%
+              border-top: 1px solid #333333
+              border-right: 1px solid #333333
+      &:last-child
+        justify-content: center
+        padding-right: 0
+        .counter
+          &__item
+            height: 30rem
+            &:first-child
+              width: 50%
+            &:last-child
+              width: 50%
+              border-right: 1px solid #333333
+    &__content
+      transform: rotate(0)
