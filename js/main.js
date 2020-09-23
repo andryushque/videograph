@@ -42,5 +42,16 @@ $(document).ready(function () {
     dotsEach: true,
     items: 3,
     smartSpeed: 1200,
+    responsive: {
+      992: {
+        items: 3,
+      },
+      768: {
+        items: 2,
+      },
+      320: {
+        items: 1,
+      },
+    },
   });
 });
