@@ -1,0 +1,133 @@
+.footer
+  &-social
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 3rem 0
+    border-bottom: 1px solid rgba($color-light, 0.1)
+  &__social-links
+    display: flex
+    align-items: center
+    .social
+      &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 4rem
+        height: 4rem
+        border-radius: 50%
+        margin-left: 1rem
+        background-color: rgba($color-light, 0.1)
+        color: $color-light
+        font-size: 1.5rem
+        &:hover
+          color: $color-accent
+          transition: color 0.5s ease
+
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    padding: 7.5rem 0 3.5rem
+  .footer-item
+    &:nth-child(1)
+      width: 35%
+      padding-right: 3rem
+    &:nth-child(2), &:nth-child(3)
+      width: 15%
+    &:nth-child(4)
+      width: 35%
+    &__title
+      margin-bottom: 3.5rem
+      @include section-title($font-size: 1.8rem, $text-transform: none)
+    &__text
+      margin-bottom: 2rem
+      @include paragraph-text()
+    &__read-link
+      display: flex
+      align-items: center
+      margin-top: auto
+      margin-bottom: 0
+      font: normal 400 1.6rem "JosefinSans"
+      color: $color-light
+      &:hover
+        color: $color-accent
+        transition: color 0.5s ease
+    &__read-icon
+      margin-left: 1rem
+      font-size: 1.4rem
+
+    &__li
+      margin-bottom: 1rem
+      &:last-child
+        margin-bottom: 0
+    &__link
+      @include paragraph-text()
+      &:hover
+        color: $color-accent
+        transition: color 0.5s ease
+
+    .form
+      position: relative
+      &__input
+        width: 100%
+        height: 5rem
+        outline: none
+        border: 1px solid rgba($color-light, 0.2)
+        padding: 0 7rem 0 2rem
+        background-color: transparent
+        font: normal 400 1.6rem/5rem "JosefinSans"
+        color: $color-grey
+        &:focus
+          outline: 1px solid $color-accent
+      &:invalid
+        .form
+          &__input
+            box-shadow: none
+          &__button
+            cursor: not-allowed
+            pointer-events: none
+      &__button
+        position: absolute
+        right: 0
+        bottom: 0
+        top: 0
+        z-index: 10
+        width: 5rem
+        height: 5rem
+        background-color: $color-accent
+        &-icon
+          font-size: 1.8rem
+          line-height: 5rem
+          color: $color-light
+        &:hover
+          background-color: $color-light
+          transition: background-color 0.5s ease
+          .form
+            &__button-icon
+              color: $color-accent
+              transition: color 0.5s ease
+  &-copyright
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 3rem 0
+    border-top: 1px solid rgba($color-light, 0.1)
+    &__text
+      display: inline-block
+      @include paragraph-text()
+      &:first-child
+        position: relative
+        margin-right: 3rem
+        &::after
+          content: "|"
+          position: absolute
+          top: 0
+          right: -1.8rem
+    &__icon
+      font-size: 1.6rem
+      color: $color-accent
+    &__link
+      color: $color-accent
+      &:hover
+        color: $color-light
+        transition: color 0.5s ease
