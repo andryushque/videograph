@@ -54,4 +54,23 @@ $(document).ready(function () {
       },
     },
   });
+
+  /*=== Counter ===*/
+  // animation to counter numbers (from 0)
+  $(".counter__number").each(function () {
+    $(this)
+      .prop("counter", 0)
+      .animate(
+        {
+          counter: $(this).text(),
+        },
+        {
+          duration: 5000,
+          easing: "swing",
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          },
+        }
+      );
+  });
 });
