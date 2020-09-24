@@ -26,9 +26,9 @@
   text-transform: uppercase
   color: $color-light
 
-@mixin paragraph-text($font-size: 1.6rem, $color: $color-grey)
+@mixin paragraph-text($font-size: 1.6rem, $color: $color-grey, $font-style: normal)
   font-family: "JosefinSans"
-  font-style: normal
+  font-style: $font-style
   font-weight: 400 
   font-size: $font-size
   line-height: $font-size * 1.625

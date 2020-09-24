@@ -1,0 +1,67 @@
+.testimonials
+  padding: 12rem 0 8rem
+  background-image: url(../img/testimonials/testimonials-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  &__info
+    margin-bottom: 2rem
+  &__suptitle
+    text-align: center
+    margin-bottom: 0.6rem
+    @include section-suptitle()
+  &__title
+    text-align: center
+    margin-bottom: 7.5rem
+    @include section-title()
+    &::after
+      left: 50%
+      transform: translateX(-50%)
+      @include section-title-after()
+  .card
+    width: 90%
+    &__content
+      min-height: 18rem
+      padding: 3rem
+      margin-bottom: 3rem
+      border: 1px solid rgba($color-light, 0.2)
+    &__text
+      @include paragraph-text($font-size: 1.8rem,  $font-style: italic)
+    &__author
+      display: flex
+      align-items: center
+      padding-left: 3rem
+    &__image-wrapper
+      width: 6rem
+      min-width: 6rem
+      height: 6rem
+      border-radius: 50%
+      margin-right: 2rem
+    &__image
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 50%
+    &__name
+      margin-bottom: 1rem
+      @include section-title($font-size: 1.8rem, $text-transform: none)
+    &__profession
+      font: normal 300 1.6rem "JosefinSans"
+      color: $color-light
+
+  .owl-carousel 
+    .owl-dots
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 4rem
+      .owl
+        &-dot
+          display: inline-block
+          width: 0.8rem
+          height: 0.8rem
+          margin-right: 1rem
+          border-radius: 50%  
+          background-color: rgba($color-light, 0.2)
+          &.active
+            background-color: $color-accent

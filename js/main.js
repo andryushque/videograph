@@ -55,6 +55,26 @@ $(document).ready(function () {
     },
   });
 
+  // Slider for testimonials section
+  $(".testimonials .owl-carousel").owlCarousel({
+    loop: true,
+    dots: true,
+    dotsEach: true,
+    items: 3,
+    smartSpeed: 1200,
+    responsive: {
+      992: {
+        items: 3,
+      },
+      768: {
+        items: 2,
+      },
+      320: {
+        items: 1,
+      },
+    },
+  });
+
   /*=== Counter ===*/
   // animation to counter numbers (from 0)
   $(".counter__number").each(function () {
