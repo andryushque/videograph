@@ -55,6 +55,7 @@
         width: 0%
         height: 0.2rem
         background-color: $color-accent
+        transition: width 0.3s ease
       &::after
         left: 50%
       &::before
@@ -62,7 +63,6 @@
       &:hover, &.active
         &::after, &::before
           width: 50%
-          transition: width 0.3s ease
 
   .social
     &__link
@@ -72,9 +72,9 @@
     &__icon
       font-size: 1.5rem
       color: $color-light
+      transition: color 0.3s ease
       &:hover
         color: $color-accent
-        transition: color 0.3s ease
 
   .mmenu
     display: none

@@ -52,21 +52,6 @@ button
     border: none
     padding: 0
 
-/*=== PHPMailer Message ===*/
-.message
-  padding: 20rem 0
-  &-wrapper
-    max-width: 90rem  
-    margin: 0 auto
-  &__text
-    text-align: center
-    @include paragraph-text($font-size: 2.4rem)
-  &__link
-    color: $color-accent
-    &:hover
-      text-decoration: underline
-
-/*=== Кнопка наверх ===*/
 .top-button 
   position: fixed
   bottom: 2rem
@@ -94,3 +79,17 @@ button
   &__icon
     font-size: 2.2rem
     color: $color-light
+
+/*=== PHPMailer Message ===*/
+.message
+  padding: 20rem 0
+  &-wrapper
+    max-width: 90rem  
+    margin: 0 auto
+  &__text
+    text-align: center
+    @include paragraph-text($font-size: 2.4rem)
+  &__link
+    color: $color-accent
+    &:hover
+      text-decoration: underline
