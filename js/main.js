@@ -107,4 +107,10 @@ $(document).ready(function () {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "600");
   });
+
+  /*=== Preloader ===*/
+  $(window).on("load", function () {
+    $(".loader").fadeOut();
+    $(".preloder").delay(200).fadeOut("slow");
+  });
 });
