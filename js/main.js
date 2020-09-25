@@ -113,4 +113,15 @@ $(document).ready(function () {
     $(".loader").fadeOut();
     $(".preloder").delay(200).fadeOut("slow");
   });
+
+  /*=== Portfolio Filter ===*/
+  const filterTab = $("[data-filter]");
+  filterTab.on("click", function (event) {
+    event.preventDefault();
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+  if ($(".portfolio__items").length > 0) {
+    const containerEl = document.querySelector(".portfolio__items");
+    const mixer = mixitup(containerEl);
+  }
 });

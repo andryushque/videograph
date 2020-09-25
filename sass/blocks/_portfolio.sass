@@ -1,0 +1,53 @@
+.portfolio
+  padding: 10rem 0
+
+  &__nav
+    display: flex
+    justify-content: center
+    margin-bottom: 4rem
+    &-link
+      display: inline-block
+      padding: 0.5rem 1.5rem
+      margin-right: 1rem
+      border: 1px solid transparent
+      transition: border 0.3s ease
+      @include paragraph-text()
+      &.active
+        border: 1px solid $color-accent
+      &:last-child
+        margin-right: 0
+  &__items
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(1, 33rem)
+    grid-auto-rows: 33rem
+    grid-gap: 3rem
+  &__image-wrapper
+    width: 100%
+    height: 24rem
+    margin-bottom: 2rem
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+    filter: brightness(0.8)
+    transition: filter 0.5s ease
+    &:hover
+      filter: brightness(1.2)
+  &__item
+    &.hide
+      display: none
+    &-title
+      display: block
+      margin-bottom: 1rem
+      text-align: center
+      transition: color 0.5s ease
+      @include section-title($font-size: 2.2rem, $text-transform: none)
+      &:hover
+        color: $color-accent
+    &-text
+      display: block
+      text-align: center
+      @include paragraph-text()
+
+
