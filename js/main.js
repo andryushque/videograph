@@ -75,6 +75,31 @@ $(document).ready(function () {
     },
   });
 
+  // Slider for logos section
+  $(".logos .owl-carousel").owlCarousel({
+    loop: true,
+    items: 5,
+    autoplay: true,
+    smartSpeed: 1200,
+    responsive: {
+      1201: {
+        items: 5,
+      },
+      992: {
+        items: 4,
+      },
+      768: {
+        items: 3,
+      },
+      576: {
+        items: 2,
+      },
+      320: {
+        items: 1,
+      },
+    },
+  });
+
   /*=== Counter ===*/
   // animation to counter numbers (from 0)
   $(".counter__number").each(function () {
