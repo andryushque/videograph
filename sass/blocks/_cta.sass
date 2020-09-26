@@ -15,3 +15,20 @@
     @include paragraph-text($font-size: 1.5rem, $color: rgba($color-light, 0.7))
   &__button
     @include button-secondary()
+
+  &--page
+    background-image: url(../img/cta/callto-bg-page.jpg)
+    .cta
+      &-wrapper
+        text-align: center
+      &__title
+        max-width: 100%
+        margin-bottom: 2.2rem
+        @include section-title($font-size: 4.2rem)
+      &__text
+        margin-bottom: 5.5rem
+        text-transform: uppercase
+        @include paragraph-text($font-size: 1.5rem, $color: rgba($color-light, 0.7))
+      &__button
+        @include button-secondary()
+
