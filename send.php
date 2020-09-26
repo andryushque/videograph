@@ -8,12 +8,29 @@ require 'phpmailer/Exception.php';
 $email = $_POST['email'];
 $form = $_POST['form'];
 
-// Формирование самого письма
+$contactName = $_POST['contact-name'];
+$contactEmail = $_POST['contact-email'];
+$contactWebsite = $_POST['contact-website'];
+$contactMessage = $_POST['contact-message'];
+
+// Формирование самого письма для формы newsletter из подвала
 if ($form == 'footer-form') {
   $title = "Подписка на сайте Videograph";
   $body = "
   <h3>Новая подписка</h3>
-  <b>email:</b> $email<br>
+  <b>Email:</b> $email<br>
+  ";
+};
+
+// Формирование самого письма для формы со страницы contact
+if ($form == 'contact-form') {
+  $title = "Новое сообщение на сайте Videograph";
+  $body = "
+  <h3>Новое сообщение</h3>
+  <b>Имя:</b> $contactName<br>
+  <b>Email:</b> $contactEmail<br>
+  <b>Website:</b> $contactWebsite<br>
+  <b>Сообщение:</b> $contactMessage<br>
   ";
 };
 
@@ -53,7 +70,10 @@ else {$result = "error";}
 
 // Отображение результата
 if ($form == 'footer-form') {
-  header('Location: phpmailer-message.html');
+  header('Location: phpmailer-newsletter.html');
+};
+if ($form == 'contact-form') {
+  header('Location: phpmailer-contact.html');
 };
 
 //echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
